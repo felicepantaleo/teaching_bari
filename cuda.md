@@ -6,15 +6,15 @@ section: parallelism
 
 Some of you are sharing the same machine and some time measurements can be influenced by other users running at the very same moment. It can be necessary to run time measurements multiple times. Offloading tasks for your intelligence to Google and Stackoverflow many times is a very good idea, but not this week. Try not to use it. If you have any questions ask me and probably we will Google it together ;-)
 ~~~
-$ wget www.cern.ch/felice.pantaleo/intro_cuda/exercises_2018.tar.gz
-$ tar -xzf exercises_2018.tar.gz
+$ wget www.cern.ch/felice.pantaleo/intro_cuda/exercises_2019.tar.gz
+$ tar -xzf exercises_2019.tar.gz
 $ cd cuda_exercises
 ~~~
 
 
 Check that your environment is correctly configured to compile CUDA code by running:
 ~~~
-$ module load  compilers/cuda-10.0
+$ scl enable devtoolset-7 bash
 $ nvcc --version
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2018 NVIDIA Corporation
@@ -23,10 +23,7 @@ Cuda compilation tools, release 10.0, V10.0.130
 ~~~
 
 Compile and run the `deviceQuery` application:
-~~~
-$ module load compilers/gcc-7.3.0_sl7 compilers/cuda-10.0
-$ /home/HPC/fpantaleohpc/samples/1_Utilities/deviceQuery/deviceQuery
-~~~
+
 
 You can get some useful information about the features and the limits that you will find on the device you will be running your code on. For example:
 ~~~
