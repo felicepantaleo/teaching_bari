@@ -201,7 +201,7 @@ int main()
 
 Compile with:
 ~~~
-g++ hello_world.cpp -ltbb
+g++ hello_world.cpp -ltbb -L /home/tbb2019_20190522oss/lib/intel64/gcc4.7/
 ~~~
 
 
