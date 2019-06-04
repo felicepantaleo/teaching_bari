@@ -6,6 +6,7 @@ section: parallelism
 
 Some of you are sharing the same machine and some time measurements can be influenced by other users running at the very same moment. It can be necessary to run time measurements multiple times. Offloading tasks for your intelligence to Google and Stackoverflow many times is a very good idea, but not this week. Try not to use it. If you have any questions ask me and probably we will Google it together ;-)
 ~~~
+
 $ wget www.cern.ch/felice.pantaleo/intro_cuda/exercises_2019.tar.gz
 $ tar -xzf exercises_2019.tar.gz
 $ cd cuda_exercises
@@ -15,6 +16,8 @@ $ cd cuda_exercises
 Check that your environment is correctly configured to compile CUDA code by running:
 ~~~
 $ scl enable devtoolset-7 bash
+$ export PATH=/usr/local/cuda/bin:$PATH
+$ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 $ nvcc --version
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2018 NVIDIA Corporation
