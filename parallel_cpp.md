@@ -182,10 +182,9 @@ int main()
 ### Setting the environment for Intel TBB
 
 ~~~
-wget https://github.com/01org/tbb/releases/download/2018_U6/tbb2018_20180822oss_lin.tgz
-tar -xzf tbb2018_20180822oss_lin.tgz
-cd tbb2018_20180822oss
-source bin/tbbvars.sh intel64 linux auto_tbbroot
+scl enable devtoolset-7 bash
+source /home/tbb2019_20190522oss/bin/tbbvars.sh intel64 linux auto_tbbroot
+g++ yourprogram.cpp -ltbb -L /home/tbb2019_20190522oss/lib/intel64/gcc4.7/
 ~~~
 
 Let's check that you can compile a simple tbb program:
